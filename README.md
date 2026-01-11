@@ -1,0 +1,2 @@
+# ddnsgo
+build for armbian
