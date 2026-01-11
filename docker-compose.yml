@@ -1,0 +1,14 @@
+services:
+  ddns-go:
+    image: jeessy/ddns-go:latest
+    container_name: ddns-go
+    network_mode: "container:mihomo"
+    restart: always
+    volumes:
+      - ./:/root
+    ports:
+      - "9876:9876"
+
+networks:
+  macvlan:
+    external: true
