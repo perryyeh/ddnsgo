@@ -6,8 +6,6 @@ services:
     restart: always
     volumes:
       - ./:/root
-    ports:
-      - "9876:9876"
 
 networks:
   macvlan:
