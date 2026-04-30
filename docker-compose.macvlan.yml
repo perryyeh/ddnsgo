@@ -1,0 +1,18 @@
+services:
+  ddns-go:
+    image: jeessy/ddns-go:latest
+    container_name: ddnsgo
+    hostname: ddnsgo
+    restart: always
+    networks:
+      macvlan:
+        ipv4_address: ${ipv4}
+        ipv6_address: ${ipv6}
+        mac_address: ${macaddress}
+    volumes:
+      - ./:/root
+
+networks:
+  macvlan:
+    external: true
+    name: ${MACVLAN_NET}
